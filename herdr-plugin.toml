@@ -1,19 +1,22 @@
-[plugin]
 id = "herdr-codebuddy"
 name = "CodeBuddy Integration"
-description = "Manages CodeBuddy hooks and reports agent state/session information for Herdr"
 version = "0.1.0"
-
-[plugin.metadata]
 min_herdr_version = "0.9.2"
-supported_platforms = ["darwin", "linux"]
-# supported_platforms = ["darwin", "linux", "windows"]  # Windows pending Git Bash quoting verification
+description = "Manages CodeBuddy hooks and reports agent state/session information for Herdr"
+platforms = ["macos", "linux"]
+# Add "windows" after Git Bash quoting has been verified.
 
-[plugin.actions]
-install-hooks = "scripts/manage_hooks.js install"
-remove-hooks = "scripts/manage_hooks.js remove"
-status = "scripts/manage_hooks.js status"
+[[actions]]
+id = "install-hooks"
+title = "Install CodeBuddy hooks"
+command = ["node", "scripts/manage_hooks.js", "install"]
 
-[plugin.startup]
-enabled = false
-# Set to true to auto-install hooks on Herdr startup; users can explicitly invoke /hooks install instead
+[[actions]]
+id = "remove-hooks"
+title = "Remove CodeBuddy hooks"
+command = ["node", "scripts/manage_hooks.js", "remove"]
+
+[[actions]]
+id = "status"
+title = "Check CodeBuddy hook status"
+command = ["node", "scripts/manage_hooks.js", "status"]
