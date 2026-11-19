@@ -1,0 +1,22 @@
+{
+  "feature_name": "codebuddy-integration",
+  "created_at": "2026-11-19T07:13:57Z",
+  "updated_at": "2026-11-19T08:15:20Z",
+  "language": "en",
+  "phase": "tasks-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": true,
+      "approved": true
+    },
+    "tasks": {
+      "generated": true,
+      "approved": false
+    }
+  },
+  "ready_for_implementation": false
+}
