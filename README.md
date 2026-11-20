@@ -180,4 +180,6 @@ If CodeBuddy introduces new supported events, you can:
 
 ## License
 
-MIT. See the accompanying LICENSE file for details.
+[MIT](./LICENSE)
+
+Copyright © 2026-present Le Minh Tri.
